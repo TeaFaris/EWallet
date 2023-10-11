@@ -1,4 +1,6 @@
+using EWallet.Configuration;
 using EWallet.Data;
+using EWallet.Middlewares;
 using EWallet.Services.Repositories.WalletRepositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +13,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Configuration
+builder.Services
+    .Configure<HMACConfiguration>(builder.Configuration.GetSection(nameof(HMACConfiguration)));
+
 // Database
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
     ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
@@ -19,6 +25,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // Repositories
 builder.Services.AddScoped<IWalletRepository, WalletRepository>();
+
+// Middlewares
+builder.Services
+    .AddTransient<HMACAuthenticationMiddleware>();
 
 var app = builder.Build();
 
@@ -44,5 +54,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseMiddleware<HMACAuthenticationMiddleware>();
 
 app.Run();
