@@ -4,6 +4,7 @@ using EWallet.Data;
 using EWallet.Middlewares;
 using EWallet.Services.Repositories.WalletRepositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,8 @@ builder.Services.AddSwaggerGen();
 // Configuration
 builder.Services
     .Configure<HMACConfiguration>(builder.Configuration.GetSection(nameof(HMACConfiguration)));
+builder.Services
+    .Configure<WalletPresets>(builder.Configuration.GetSection(nameof(WalletPresets)));
 
 // Database
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
@@ -42,6 +45,28 @@ using (var provider = app.Services.CreateScope())
     if (context.Database.GetPendingMigrations().Any())
     {
         context.Database.Migrate();
+    }
+}
+
+// Wallet Presets add to database
+using (var provider = app.Services.CreateScope())
+{
+    var dbContext = provider.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    var walletPresets = provider.ServiceProvider.GetRequiredService<IOptions<WalletPresets>>().Value;
+
+    if (walletPresets.DropDatabase)
+    {
+        await dbContext.Database.EnsureDeletedAsync();
+    }
+
+    if (walletPresets.Enable)
+    {
+        await dbContext.Database.EnsureCreatedAsync();
+
+        var walletRepository = provider.ServiceProvider.GetRequiredService<IWalletRepository>();
+
+        await walletRepository.AddRangeAsync(walletPresets.Wallets);
+        await walletRepository.SaveAsync();
     }
 }
 
