@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EWallet.Configuration\EWallet.Configuration.csproj" />
+    <ProjectReference Include="..\EWallet.Controllers\EWallet.Controllers.csproj" />
     <ProjectReference Include="..\EWallet.Data\EWallet.Data.csproj" />
     <ProjectReference Include="..\EWallet.Middlewares\EWallet.Middlewares.csproj" />
     <ProjectReference Include="..\EWallet.Services\EWallet.Services.csproj" />

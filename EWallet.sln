@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EWallet.Models", "EWallet.M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EWallet.Services", "EWallet.Services\EWallet.Services.csproj", "{EC4712CC-9292-433E-A385-CF1D49A90F76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EWallet.Middlewares", "EWallet.Middlewares\EWallet.Middlewares.csproj", "{8CF5030D-ED74-477E-B490-20B512EA8751}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EWallet.Middlewares", "EWallet.Middlewares\EWallet.Middlewares.csproj", "{8CF5030D-ED74-477E-B490-20B512EA8751}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EWallet.Configuration", "EWallet.Configuration\EWallet.Configuration.csproj", "{D8AB886B-1C09-42A1-8BE9-958DC9536582}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EWallet.Configuration", "EWallet.Configuration\EWallet.Configuration.csproj", "{D8AB886B-1C09-42A1-8BE9-958DC9536582}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EWallet.Controllers", "EWallet.Controllers\EWallet.Controllers.csproj", "{8EC5A302-4318-48E6-81B3-084DA29DB04F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D8AB886B-1C09-42A1-8BE9-958DC9536582}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8AB886B-1C09-42A1-8BE9-958DC9536582}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8AB886B-1C09-42A1-8BE9-958DC9536582}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EC5A302-4318-48E6-81B3-084DA29DB04F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EC5A302-4318-48E6-81B3-084DA29DB04F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EC5A302-4318-48E6-81B3-084DA29DB04F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EC5A302-4318-48E6-81B3-084DA29DB04F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
