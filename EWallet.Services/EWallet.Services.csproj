@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EWallet.Data\EWallet.Data.csproj" />
+    <ProjectReference Include="..\EWallet.Models\EWallet.Models.csproj" />
+  </ItemGroup>
+
 </Project>
