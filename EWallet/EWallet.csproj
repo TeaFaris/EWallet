@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EWallet.Data\EWallet.Data.csproj" />
+    <ProjectReference Include="..\EWallet.Services\EWallet.Services.csproj" />
   </ItemGroup>
 
 </Project>
