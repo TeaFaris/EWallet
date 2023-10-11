@@ -57,6 +57,13 @@ namespace EWallet.Controllers
                 Wallet = wallet
             };
 
+            var limit = wallet.Identified ? 100000 : 10000;
+
+            if (wallet.Balance + deposit.Amount > limit)
+            {
+                return BadRequest($"The wallet cannot have more than {limit} somoni.");
+            }
+
             wallet.Balance += deposit.Amount;
             wallet.Transactions.Add(newTransaction);
 
