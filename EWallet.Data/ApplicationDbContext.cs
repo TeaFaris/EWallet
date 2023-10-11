@@ -1,11 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
+using EWallet.Models;
 
 namespace EWallet.Data
 {
     public class ApplicationDbContext : DbContext
     {
+        public DbSet<Wallet> Wallets { get; init; }
+        public DbSet<Transaction> Transactions { get; init; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
