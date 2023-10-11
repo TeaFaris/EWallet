@@ -1,3 +1,4 @@
+using EWallet.Configuration;
 using EWallet.Data;
 using EWallet.Services.Repositories.WalletRepositories;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Configuration
+builder.Services
+    .Configure<HMACConfiguration>(builder.Configuration.GetSection(nameof(HMACConfiguration)));
 
 // Database
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
