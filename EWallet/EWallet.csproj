@@ -4,11 +4,24 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>116a2907-58ff-498f-9407-ebc6913e6749</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EWallet.Configuration\EWallet.Configuration.csproj" />
+    <ProjectReference Include="..\EWallet.Controllers\EWallet.Controllers.csproj" />
+    <ProjectReference Include="..\EWallet.Data\EWallet.Data.csproj" />
+    <ProjectReference Include="..\EWallet.Middlewares\EWallet.Middlewares.csproj" />
+    <ProjectReference Include="..\EWallet.Services\EWallet.Services.csproj" />
   </ItemGroup>
 
 </Project>
