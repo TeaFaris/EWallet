@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EWallet.Middlewares\EWallet.Middlewares.csproj" />
+    <ProjectReference Include="..\EWallet.Models\EWallet.Models.csproj" />
     <ProjectReference Include="..\EWallet.Services\EWallet.Services.csproj" />
   </ItemGroup>
 

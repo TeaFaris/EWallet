@@ -7,7 +7,7 @@ namespace EWallet.Models
         [Key]
         public int Id { get; init; }
 
-        public decimal Balance { get; init; }
+        public decimal Balance { get; set; }
 
         public List<Transaction> Transactions { get; init; }
     }
