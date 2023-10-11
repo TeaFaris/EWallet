@@ -9,11 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EWallet.Data", "EWallet.Dat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EWallet.Models", "EWallet.Models\EWallet.Models.csproj", "{C4F7BFD5-0105-4C6A-A5C2-69B589EE2C23}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EWallet.Services", "EWallet.Services\EWallet.Services.csproj", "{EC4712CC-9292-433E-A385-CF1D49A90F76}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EWallet.Configuration", "EWallet.Configuration\EWallet.Configuration.csproj", "{4CE56F42-28B4-4D82-9534-5DF65B7A6167}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EWallet.Filters", "EWallet.Filters\EWallet.Filters.csproj", "{BFB72C6C-967D-4DAA-A353-664D811D2797}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EWallet.Services", "EWallet.Services\EWallet.Services.csproj", "{EC4712CC-9292-433E-A385-CF1D49A90F76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +33,6 @@ Global
 		{EC4712CC-9292-433E-A385-CF1D49A90F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC4712CC-9292-433E-A385-CF1D49A90F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC4712CC-9292-433E-A385-CF1D49A90F76}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4CE56F42-28B4-4D82-9534-5DF65B7A6167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4CE56F42-28B4-4D82-9534-5DF65B7A6167}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4CE56F42-28B4-4D82-9534-5DF65B7A6167}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4CE56F42-28B4-4D82-9534-5DF65B7A6167}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BFB72C6C-967D-4DAA-A353-664D811D2797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BFB72C6C-967D-4DAA-A353-664D811D2797}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BFB72C6C-967D-4DAA-A353-664D811D2797}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BFB72C6C-967D-4DAA-A353-664D811D2797}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
