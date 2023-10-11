@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EWallet", "EWallet\EWallet.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EWallet.Data", "EWallet.Data\EWallet.Data.csproj", "{81830C47-8FD1-45B3-983F-BBD979A533BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EWallet.Models", "EWallet.Models\EWallet.Models.csproj", "{C4F7BFD5-0105-4C6A-A5C2-69B589EE2C23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{81830C47-8FD1-45B3-983F-BBD979A533BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81830C47-8FD1-45B3-983F-BBD979A533BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81830C47-8FD1-45B3-983F-BBD979A533BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4F7BFD5-0105-4C6A-A5C2-69B589EE2C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4F7BFD5-0105-4C6A-A5C2-69B589EE2C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4F7BFD5-0105-4C6A-A5C2-69B589EE2C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4F7BFD5-0105-4C6A-A5C2-69B589EE2C23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
