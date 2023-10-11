@@ -9,6 +9,8 @@ namespace EWallet.Models
 
         public decimal Balance { get; set; }
 
+        public bool Identified { get; init; }
+
         public List<Transaction> Transactions { get; init; }
     }
 }
